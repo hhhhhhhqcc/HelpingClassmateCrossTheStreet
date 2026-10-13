@@ -1,0 +1,338 @@
+{
+  "theme": "Night city / navy, mint, warm orange",
+  "assets": [
+    {
+      "id": 0,
+      "file": "assets/art-00.png",
+      "width": 1250,
+      "height": 900,
+      "bytes": 227949
+    },
+    {
+      "id": 1,
+      "file": "assets/art-01.png",
+      "width": 1080,
+      "height": 660,
+      "bytes": 23526
+    },
+    {
+      "id": 2,
+      "file": "assets/art-02.png",
+      "width": 1250,
+      "height": 820,
+      "bytes": 86938
+    },
+    {
+      "id": 3,
+      "file": "assets/art-03.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3957
+    },
+    {
+      "id": 4,
+      "file": "assets/art-04.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4562
+    },
+    {
+      "id": 5,
+      "file": "assets/art-05.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3161
+    },
+    {
+      "id": 6,
+      "file": "assets/art-06.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4158
+    },
+    {
+      "id": 7,
+      "file": "assets/art-07.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3496
+    },
+    {
+      "id": 8,
+      "file": "assets/art-08.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4115
+    },
+    {
+      "id": 9,
+      "file": "assets/art-09.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3956
+    },
+    {
+      "id": 10,
+      "file": "assets/art-10.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3296
+    },
+    {
+      "id": 11,
+      "file": "assets/art-11.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3974
+    },
+    {
+      "id": 12,
+      "file": "assets/art-12.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3226
+    },
+    {
+      "id": 13,
+      "file": "assets/art-13.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4158
+    },
+    {
+      "id": 14,
+      "file": "assets/art-14.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4451
+    },
+    {
+      "id": 15,
+      "file": "assets/art-15.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3978
+    },
+    {
+      "id": 16,
+      "file": "assets/art-16.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3328
+    },
+    {
+      "id": 17,
+      "file": "assets/art-17.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4384
+    },
+    {
+      "id": 18,
+      "file": "assets/art-18.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 5360
+    },
+    {
+      "id": 19,
+      "file": "assets/art-19.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4548
+    },
+    {
+      "id": 20,
+      "file": "assets/art-20.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4632
+    },
+    {
+      "id": 21,
+      "file": "assets/art-21.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4535
+    },
+    {
+      "id": 22,
+      "file": "assets/art-22.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3104
+    },
+    {
+      "id": 23,
+      "file": "assets/art-23.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3424
+    },
+    {
+      "id": 24,
+      "file": "assets/art-24.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4394
+    },
+    {
+      "id": 25,
+      "file": "assets/art-25.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3402
+    },
+    {
+      "id": 26,
+      "file": "assets/art-26.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3986
+    },
+    {
+      "id": 27,
+      "file": "assets/art-27.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 1556
+    },
+    {
+      "id": 28,
+      "file": "assets/art-28.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 1764
+    },
+    {
+      "id": 29,
+      "file": "assets/art-29.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 1037
+    },
+    {
+      "id": 30,
+      "file": "assets/art-30.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 710
+    },
+    {
+      "id": 31,
+      "file": "assets/art-31.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 996
+    },
+    {
+      "id": 32,
+      "file": "assets/art-32.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 1752
+    },
+    {
+      "id": 33,
+      "file": "assets/art-33.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3295
+    },
+    {
+      "id": 34,
+      "file": "assets/art-34.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3968
+    },
+    {
+      "id": 35,
+      "file": "assets/art-35.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4228
+    },
+    {
+      "id": 36,
+      "file": "assets/art-36.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 5319
+    },
+    {
+      "id": 37,
+      "file": "assets/art-37.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3190
+    },
+    {
+      "id": 38,
+      "file": "assets/art-38.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4297
+    },
+    {
+      "id": 39,
+      "file": "assets/art-39.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 4116
+    },
+    {
+      "id": 40,
+      "file": "assets/art-40.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 3315
+    }
+  ],
+  "icon": "assets/game.ico",
+  "version": "0.4.0",
+  "audio": [
+    {
+      "id": 0,
+      "name": "牵手",
+      "file": "assets/audio/fx-0.wav",
+      "sampleRate": 22050,
+      "durationSeconds": 0.25
+    },
+    {
+      "id": 1,
+      "name": "口哨",
+      "file": "assets/audio/fx-1.wav",
+      "sampleRate": 22050,
+      "durationSeconds": 0.16
+    },
+    {
+      "id": 2,
+      "name": "冲刺",
+      "file": "assets/audio/fx-2.wav",
+      "sampleRate": 22050,
+      "durationSeconds": 0.14
+    },
+    {
+      "id": 3,
+      "name": "碰撞",
+      "file": "assets/audio/fx-3.wav",
+      "sampleRate": 22050,
+      "durationSeconds": 0.24
+    },
+    {
+      "id": 4,
+      "name": "获得与通关",
+      "file": "assets/audio/fx-4.wav",
+      "sampleRate": 22050,
+      "durationSeconds": 0.43
+    },
+    {
+      "id": 5,
+      "name": "道具",
+      "file": "assets/audio/fx-5.wav",
+      "sampleRate": 22050,
+      "durationSeconds": 0.31
+    }
+  ]
+}

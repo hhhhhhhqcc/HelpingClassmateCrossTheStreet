@@ -1,0 +1,11 @@
+* text=auto
+*.mjs text eol=lf
+*.cs text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.exe binary
+*.ico binary
+*.png binary
+*.gif binary
+*.wav binary
+*.zip binary
