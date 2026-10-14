@@ -38,12 +38,12 @@ export function createGameHarness(source) {
 
 export function createIntegratedGameHarness(bundle) {
   const {b,fields,h:initHost,arrayLengths}=bundle,functions={},keys=new Set();let focus=true,randomState=1;
-  const draws=[],sounds=[],fullscreenEvents=[],pointer={x:-100,y:-100};
+  const draws=[],sounds=[],fullscreenEvents=[],quitEvents=[],pointer={x:-100,y:-100};
   const rand=()=>{randomState^=randomState<<13;randomState^=randomState>>>17;randomState^=randomState<<5;return (randomState>>>0)/4294967296;};
   const implementations={
     Rand:()=>Math.fround(rand()),RandomInt:(a,z)=>a+Math.floor(rand()*(z-a)),SetRandom:s=>{randomState=s|0;if(!randomState)randomState=1;},NewSeed:()=>123456,
     Key:k=>keys.has(k)?1:0,HasFocus:()=>focus?1:0,N:n=>String(n|0),Join:(a,z)=>(a||'')+(z||''),FloatText:n=>Number(n).toFixed(1),
-    Min:(a,z)=>Math.fround(Math.min(a,z)),Max:(a,z)=>Math.fround(Math.max(a,z)),Abs:x=>Math.fround(Math.abs(x)),Sqrt:x=>Math.fround(Math.sqrt(x)),Sin:x=>Math.fround(Math.sin(x)),Cos:x=>Math.fround(Math.cos(x)),MouseX:()=>pointer.x,MouseY:()=>pointer.y,Sound:id=>{if(id<0||id>5)throw Error("Invalid sound");sounds.push(id);},ToggleFullscreen:()=>fullscreenEvents.push(1)
+    Min:(a,z)=>Math.fround(Math.min(a,z)),Max:(a,z)=>Math.fround(Math.max(a,z)),Abs:x=>Math.fround(Math.abs(x)),Sqrt:x=>Math.fround(Math.sqrt(x)),Sin:x=>Math.fround(Math.sin(x)),Cos:x=>Math.fround(Math.cos(x)),MouseX:()=>pointer.x,MouseY:()=>pointer.y,Sound:id=>{if(id<0||id>5)throw Error("Invalid sound");sounds.push(id);},ToggleFullscreen:()=>fullscreenEvents.push(1),QuitGame:()=>quitEvents.push(1)
   };
   const types={1:'void',2:'bool',8:'int',12:'float',14:'string'};
   for(const name of ['Rect','Outline','Circle','Line','Text','TextBlock','Art','Ring','SoftRect','BeginWorld','EndWorld'])implementations[name]=(...args)=>{
@@ -51,7 +51,7 @@ export function createIntegratedGameHarness(bundle) {
     if(name==='Ring'){if(args.some(a=>!Number.isFinite(a))||args[2]<0||args[3]<=0)throw Error('Invalid ring');draws.push({name,args});return;}
     if(name==='SoftRect'){if(args.some(a=>!Number.isFinite(a))||args[2]<0||args[3]<0||args[5]<0||args[5]>1)throw Error('Invalid alpha rect');draws.push({name,args});return;}
     if(name==='TextBlock'){if(typeof args[0]!=='string'||args.slice(1).some(a=>!Number.isFinite(a))||args[3]<=0||args[4]<=0||args[5]<=0)throw Error('Invalid wrapped text');draws.push({name,args});return;}
-    if(name==='Art'){if(args.some(a=>!Number.isFinite(a))||args[0]<0||args[0]>40||args[3]<0||args[4]<0)throw Error('Invalid art geometry');draws.push({name,args});return;}
+    if(name==='Art'){if(args.some(a=>!Number.isFinite(a))||args[0]<0||args[0]>41||args[3]<0||args[4]<0)throw Error('Invalid art geometry');draws.push({name,args});return;}
     for(let i=name==='Text'?1:0;i<4;i++)if(!Number.isFinite(args[i]))throw Error('Non-finite drawing geometry in '+name);
     if(name==='Text'&&typeof args[0]!=='string')throw Error('Text received nonstring');
     if((name==='Rect'||name==='Circle'||name==='Outline')&&(args[2]<0||args[3]<0))throw Error('Negative drawing extent '+name);
@@ -67,7 +67,7 @@ export function createIntegratedGameHarness(bundle) {
   const initialize=(mode=0)=>{keys.clear();focus=true;call('Initialize');set('Mode',mode);call('StartGame',0);noCars();};
   const choose=()=>{call('ChooseReward',0);noCars();};
   const tick=(dt=.016)=>call('GameTick',dt);
-  return {b,fields,functions,state,byName,get,set,call,keys,tick,initialize,noCars,choose,setFocus:value=>focus=value,parsed:{definitions:bundle.result.compiled,fields:Object.values(fields)},draws,sounds,fullscreenEvents,pointer,bundle,arrayLengths};
+  return {b,fields,functions,state,byName,get,set,call,keys,tick,initialize,noCars,choose,setFocus:value=>focus=value,parsed:{definitions:bundle.result.compiled,fields:Object.values(fields)},draws,sounds,fullscreenEvents,quitEvents,pointer,bundle,arrayLengths};
 }
 
 export async function verifyNativeGame(sourcePath,bundle) {

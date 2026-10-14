@@ -1,38 +1,15 @@
 {
   "date": "2026-10-14",
-  "version": "0.4.0",
-  "executable": {
-    "bytes": 106496,
-    "sha256": "44931f0fbd61ca0dfa9f561a56c8dfb0f7188757ef396d84d87934a589b2eb2e",
-    "validCIL": true
+  "version": "0.5.0",
+  "exe": {
+    "bytes": 114688,
+    "sha256": "04eaaa89090c82f9ff8f74a0e45e6c17bee4da20cede97a374446414ad0c36cb",
+    "methods": 223,
+    "fields": 221,
+    "frameworkCalls": 87,
+    "valid": true
   },
-  "zip": {
-    "bytes": 576154,
-    "sha256": "86d9401adcd6e6ef1911d6f2368d0774ab7a575ff5abf556d9a311d8d8a1ae9c",
-    "verifiedFiles": 56
-  },
-  "checks": {
-    "cil": true,
-    "routes": {
-      "passed": 53,
-      "failed": 0
-    },
-    "items": {
-      "passed": 9,
-      "failed": 0
-    },
-    "roads": {
-      "passed": 9,
-      "failed": 0
-    },
-    "motion": {
-      "passed": 32,
-      "failed": 0
-    },
-    "ui": {
-      "passed": 22,
-      "failed": 0
-    }
-  },
+  "checks": 149,
+  "menuChecks": 24,
   "actualWindowsLaunchTested": false
 }

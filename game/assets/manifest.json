@@ -287,6 +287,14 @@
       "width": 96,
       "height": 96,
       "bytes": 3315
+    },
+    {
+      "id": 41,
+      "file": "assets/art-41.png",
+      "width": 1250,
+      "height": 900,
+      "bytes": 323431,
+      "role": "Native main menu street illustration"
     }
   ],
   "icon": "assets/game.ico",

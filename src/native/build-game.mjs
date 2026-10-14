@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {ManagedBuilder, Sig} from './build-managed.mjs';
-import {createHost} from './host-native-action-v2.mjs';
+import {createHost} from './host-native-menu-final.mjs';
 import {compileMethods, extractCSharpDefinitions, TypeSignatures} from './compile-subset.mjs';
 import {validateBuilder} from './validate-il.mjs';
 
@@ -35,13 +35,13 @@ const signatures={
  Ring:['void','float','float','float','float','int'],
  SoftRect:['void','float','float','float','float','int','float'],
  BeginWorld:['void','float','float'],EndWorld:['void'],
- MouseX:['float'],MouseY:['float'],Sound:['void','int'],ToggleFullscreen:['void']
+ MouseX:['float'],MouseY:['float'],Sound:['void','int'],ToggleFullscreen:['void'],QuitGame:['void']
 };
 export async function buildGame(outputPath) {
  const b=new ManagedBuilder('TongXueNative');
  const type=b.defineType('GameForm',b.typeRef('System.Windows.Forms','System.Windows.Forms','Form'));
  const h=createHost(b,type);
- const sourceNames=['game-core.cs','flow-core.cs','route-core.cs','item-core.cs','render-native.cs','route-render.cs','visual-theme.cs','visual-road.cs','visual-route.cs','motion-core.cs','motion-road.cs','motion-ui.cs','motion-presentation.cs'];
+ const sourceNames=['game-core.cs','flow-core.cs','route-core.cs','item-core.cs','render-native.cs','route-render.cs','visual-theme.cs','visual-road.cs','visual-route.cs','motion-core.cs','motion-road.cs','motion-ui.cs','motion-presentation.cs','menu-flow.cs','menu-atmosphere.cs','menu-front.cs'];
  const parsedSources=await Promise.all(sourceNames.map(async name=>extractCSharpDefinitions(await fs.readFile(path.join(here,name),'utf8'))));
  const allFields=parsedSources.flatMap(s=>s.fields);
  const definitionsByName=new Map();

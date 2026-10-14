@@ -5,7 +5,7 @@ import {buildGame} from '../src/native/build-game.mjs';
 import {generateMotionAudio} from '../src/native/generate-motion-audio.mjs';
 import {createZip,verifyZip,listPackageFiles} from '../src/native/package-visual-release.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-export async function buildRelease(output=path.join(root,'dist','同学别刷了_街头行动版')) {
+export async function buildRelease(output=path.join(root,'dist','同学别刷了_街景主菜单版')) {
  await fs.mkdir(output,{recursive:true});
  for(const name of await listPackageFiles(path.join(root,'game'))) {
   if(name.endsWith('.exe')) continue;
